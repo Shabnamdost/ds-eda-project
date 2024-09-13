@@ -1,50 +1,30 @@
-[![Shipping files](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml)
-# ds-project-template
+ 
+# King County Housing Data EDA
 
-Template for creating ds simple projects
+This project focuses on analyzing real estate data from King County to provide insights into housing prices and trends. The analysis includes visualizing price trends, understanding the impact of property grades and conditions on prices, and examining geographical influences. The ultimate goal is to support high-budget clients in making informed decisions by offering detailed recommendations on property features and locations.
+
+## Features
+
+    Price Trend Analysis: Visualization of price trends throughout the year.
+    Property Grade Analysis: Exploration of how property grades affect prices.
+    Condition Impact: Analysis of how different property conditions influence pricing.
+    Geographical Insights: Examination of price variations across different zip codes and proximity to waterfronts.
+
+## Table of Contents
+
+- [Requirements]
+- [Installation]
+- [Usage]
+- [Contributing]
+- [License]
 
 ## Requirements
+-pyenv
+-python==3.11.3
 
-- pyenv
-- python==3.11.3
+## Installation
 
-## Setup
-
-One of the first steps when starting any data science project is to create a virtual environment. For this project you have to create this environment from scratch yourself. However, you should be already familiar with the commands you will need to do so. The general workflow consists of... 
-
-* setting the python version locally to 3.11.3
-* creating a virtual environment using the `venv` module
-* activating your newly created environment 
-* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
-* installing the required packages via `pip`
-
-At the end, you want to make sure that people who are interested in your project can create an identical environment on their own computer in order to be able to run your code without running into errors. Therefore you can create a `requirements file` and add it to your repository. You can create such a file by running the following command: 
-
-```bash
-pip freeze > requirements.txt
-```
-
-*Note: In rare case such a requirements file created with `pip freeze` might not ensure that another (especially M1 chip) user can install and execute it properly. This can happen if libraries need to be compiled (e.g. SciPy). Then it also depends on environment variables and the actual system libraries.*
-
-### Unit testing (Optional)
-
-If you write python scripts for your data processing methods, you can also write unit tests. In order to run the tests execute in terminal:
-
-```bash
-pytest
-```
-
-This command will execute all the functions in your project that start with the word **test**.
-
-## Set up your Environment
-This repo contains a requirements.txt file with a list of all the packages and dependencies you will need.
-
-Before you can start with plotly in Jupyter Lab you have to install node.js (if you haven't done it before).
-- Check **Node version**  by run the following commands:
-    ```sh
-    node -v
-    ```
-    If you haven't installed it yet, begin at `step_1`. Otherwise, proceed to `step_2`.
+  If you haven't installed it yet, begin at `step_1`. Otherwise, proceed to `step_2`.
 
 
 ### **`macOS`** type the following commands : 
@@ -103,3 +83,58 @@ Before you can start with plotly in Jupyter Lab you have to install node.js (if 
    ```Bash
    python.exe -m pip install --upgrade pip
    ```
+- `Step_3:` Install the required packages by following commands.
+  pip install numpy==1.26.4
+  pip install --upgrade numpy pandas
+  pip install pytest
+  pip install scikit-learn
+This command will install the latest version of scikit-learn, which is a popular machine learning library for Python. If you need a specific version, you can specify it like so: 
+  pip install scikit-learn==1.2.0
+
+## Usage
+First, clone the repository to your local machine: 
+    git clone https://github.com/yourusername/king-county-real-estate-analysis.git
+    cd king-county-real-estate-analysis
+
+Make sure you have all the necessary dependencies installed. Run: 
+ Refer to Step 3
+
+ The project uses real estate data from King County. Ensure your dataset is in the correct format and located in the data/ directory. You can load the data using the provided scripts: 
+    import pandas as pd
+
+ Load the dataset
+df = pd.read_csv('data/king_county_real_estate.csv')
+
+## Contributing
+I welcome contributions to the Kind County Real Estate Analysis Project! If you'd like to contribute, please follow these guidelines: 
+
+1. For the Repository
+   Start by forking the repo to your own GitHub account. 
+    git clone https://github.com/yourusername/king-county-real-estate-analysis.git
+    cd king-county-real-estate-analysis
+
+2. Create New Branch
+   git checkout -b feature/your-feature-name
+
+3. Update Documentation: If your changes affect the documentation or require nes documentation, make sure to update the README.md or other relevant documentation files. 
+
+4. Commit your changes: 
+    git add .
+    git commit -m "Add feature or fix issue"
+
+5. Push your changes: 
+    git push origin feature/your-feature-name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
